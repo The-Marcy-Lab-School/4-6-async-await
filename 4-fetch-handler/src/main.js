@@ -2,7 +2,7 @@ import { renderUsers } from './dom-helpers';
 import { getUsers, getUser, createUser, deleteUser } from './fetch-helpers';
 
 const main = async () => {
-  const [data, error] = await getUsers();
+  const { data, error } = await getUsers();
   if (error) {
     renderError(error);
   } else {
